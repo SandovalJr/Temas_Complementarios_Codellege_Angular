@@ -1,0 +1,115 @@
+<h2 class="mt-4 text-center">Pipes</h2>
+<div class="container">
+  <div class="jumbotron" style="background-color: white;">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Pipes</th>
+          <th>Formato</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Currency</td>
+          <td>{{ valor }} | currency</td>
+          <td>{{ valor | currency }}</td>
+        </tr>
+        <tr>
+          <td>Currency con parametro</td>
+          <td>{{ valor }} | currency:'EUR'</td>
+          <td>{{ valor | currency: "EUR" }}</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>{{ fecha }} | date</td>
+          <td>{{ fecha | date: "short" }}</td>
+        </tr>
+        <tr>
+          <td>Date time</td>
+          <td>{{ fecha }} | time:'shortTime'</td>
+          <td>{{ fecha | date: "shortTime" }}</td>
+        </tr>
+        <tr>
+          <td>Date costum</td>
+          <td>{{ fecha }} | date:'dd/MMM/yyyy'</td>
+          <td>{{ fecha | date: "dd/MMM/yyyy" }}</td>
+        </tr>
+        <tr>
+          <td>Decimal</td>
+          <td>{{ ValorPi }} | number</td>
+          <td>{{ ValorPi | number }}</td>
+        </tr>
+        <tr>
+          <td>LowerCase</td>
+          <td>{{ texto }} | lowercase</td>
+          <td>{{ texto | lowercase }}</td>
+        </tr>
+        <tr>
+          <td>Percent</td>
+          <td>{{ porcentaje }} | percent</td>
+          <td>{{ porcentaje | percent }}</td>
+        </tr>
+        <tr>
+          <td>Percent parametros</td>
+          <td>{{ porcentaje }} | percent:'2.1-2'</td>
+          <td>{{ porcentaje | percent: "2.1-2" }}</td>
+        </tr>
+        <tr>
+          <td>Slice</td>
+          <td>{{ arregloNumerico }} | slice:2</td>
+          <td>{{ arregloNumerico | slice: 2 }}</td>
+        </tr>
+        <tr>
+          <td>Slice con parametro negativo</td>
+          <td>{{ arregloNumerico }} | slice:2:-1</td>
+          <td>{{ arregloNumerico | slice: 2:-1 }}</td>
+        </tr>
+        <tr>
+          <td>Show/Hide Contraseña</td>
+          <td>{{ contrasenaBienDificil }} | cambiarContrasena</td>
+          <td>
+            <p>
+              {{ contrasenaBienDificil | cambiarContrasena: show }}
+            </p>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  (change)="MostrarContrasena()"
+                />
+                Mostrar/ocultar
+              </label>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Comprobar Imagen</td>
+          <td></td>
+          <td>
+            <img
+              [src]="urlImage | checkExistImage"
+              style="width: 300px;"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Multiplicacion</td>
+          <td>
+            <p>{{ n1 }} se multiplica por {{ n1multiplicado }}</p>
+          </td>
+          <td>{{ r }}</td>
+        </tr>
+        <tr>
+          <td>Multiplicacion con input</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
