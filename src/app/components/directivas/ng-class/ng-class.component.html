@@ -1,0 +1,39 @@
+<h1>NgClass & NgStyle</h1>
+<!-- podemos utilizar el style para dependiendo el status o la codicion que se cumpla
+depende el color en el que se pondra
+-->
+<div
+  class="cuadro"
+  [ngStyle]="{ 'background-color': color ? 'greenyellow' : 'red' }"
+>
+  <button (click)="color = !color" class="btn-block">{{ color }}</button>
+</div>
+<div class="cuadro" [style.background]="'blue'"></div>
+
+<ul class="list-group">
+  <li
+    *ngFor="let person of people"
+    [ngStyle]="{ color: getColor(person.country) }"
+  >
+    {{ person.name }}
+  </li>
+</ul>
+
+<div class="cuadro" [ngClass]="{ 'bg-warning': color }"></div>
+
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let person of people"
+    [ngClass]="{
+      'text-success': person.country == 'MX',
+      'text-danger': person.country == 'CH',
+      'text-warning': person.country == 'USA',
+      'text-info': person.country == 'MARS'
+    }"
+  >
+    {{ person.name }}
+  </li>
+</ul>
+
+<div class="cuadro" appRandomColor ></div>
