@@ -1,5 +1,15 @@
-.cuadro{
-    width: 250px;
-    height: 250px;
-    /* background: greenyellow; */
+.cuadro {
+  width: 250px;
+  height: 250px;
+  /* background: greenyellow; */
+}
+
+.inputGrandote {
+  width: 50%;
+  margin-bottom: 100px;
+  height: 50px;
+  /* border-radius: 5px; */
+  font-size: 20px;
+  text-align: center;
+  margin-left: 10px;
 }

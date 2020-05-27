@@ -10,6 +10,12 @@ import { NgSwitchComponent } from './components/directivas/ng-switch/ng-switch.c
 import { NgClassComponent } from './components/directivas/ng-class/ng-class.component';
 import { NavbarComponent } from './components/home/navbar/navbar.component';
 import { RandomColorDirective } from './components/directivas/random-color.directive';
+import { ChangeColorDirective } from './components/directivas/change-color.directive';
+import { ChangeColorInputDirective } from './components/directivas/change-color-input.directive';
+import { PadreComponent } from './components/comunicacionComponentes/padre/padre.component';
+import { Hijo1Component } from './components/comunicacionComponentes/hijo1/hijo1.component';
+import { Padre2Component } from './components/comunicacionComponentes/padre2/padre2.component';
+import { Hijo2Component } from './components/comunicacionComponentes/hijo2/hijo2.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +27,12 @@ import { RandomColorDirective } from './components/directivas/random-color.direc
     NgClassComponent,
     NavbarComponent,
     RandomColorDirective,
+    ChangeColorDirective,
+    ChangeColorInputDirective,
+    PadreComponent,
+    Hijo1Component,
+    Padre2Component,
+    Hijo2Component,
   ],
   imports: [BrowserModule, app_routes],
   providers: [],

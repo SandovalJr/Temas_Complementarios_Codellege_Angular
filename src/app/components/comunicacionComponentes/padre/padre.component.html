@@ -1,0 +1,14 @@
+<h1 class="text-center">Comunicacion entre componentes</h1>
+<div class="container">
+  <input
+    type="text"
+    class="form-control mb-3"
+    #input1
+    (keyup)="getValorPadre(input1.value)"
+  />
+  <app-hijo1
+    [ValorPadre_Hijo]="valorPadre"
+    (EnergiaPersonas)="reunirEnergia($event)"
+  ></app-hijo1>
+  <img [src]="imagen" alt="" />
+</div>
