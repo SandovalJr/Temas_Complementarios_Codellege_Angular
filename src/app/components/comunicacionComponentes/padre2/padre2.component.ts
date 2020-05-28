@@ -14,15 +14,15 @@ export class Padre2Component implements OnInit {
 
   public sumar() {
     this.valor = this.valor + 1;
-    return this.valor;
+    this.valor;
   }
 
   public restar() {
     this.valor = this.valor - 1;
-    return this.valor;
+    this.valor;
   }
 
-  public getvalor() {
-    return this.valor;
+  public getvalor(valor: number) {
+    this.valor = valor;
   }
 }

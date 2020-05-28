@@ -17,9 +17,11 @@ export class Hijo2Component implements OnInit {
   public multiplicacion(valor: number) {
     valor = valor * valor;
     this.multi.emit(valor);
+    console.log(valor);
   }
   public division(valor: number) {
-    valor = valor / valor;
+    valor = valor / 2;
     this.divi.emit(valor);
+    console.log(valor);
   }
 }
