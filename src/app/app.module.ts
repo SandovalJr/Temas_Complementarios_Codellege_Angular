@@ -16,6 +16,7 @@ import { PadreComponent } from './components/comunicacionComponentes/padre/padre
 import { Hijo1Component } from './components/comunicacionComponentes/hijo1/hijo1.component';
 import { Padre2Component } from './components/comunicacionComponentes/padre2/padre2.component';
 import { Hijo2Component } from './components/comunicacionComponentes/hijo2/hijo2.component';
+import { PintarTablaDirective } from './components/directivas/pintar-tabla.directive';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { Hijo2Component } from './components/comunicacionComponentes/hijo2/hijo2
     Hijo1Component,
     Padre2Component,
     Hijo2Component,
+    PintarTablaDirective,
   ],
   imports: [BrowserModule, app_routes],
   providers: [],
